@@ -249,3 +249,7 @@ enum IMAGEFORMAT : UInt8
   Auto
 end
 ```
+
+## Thank you
+- npn from the Crystak Discord for help parsing MP4 boxes.
+
