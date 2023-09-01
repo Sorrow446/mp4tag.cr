@@ -19,13 +19,13 @@ MP4Tag.open("1.m4a") do |mp4|
   # Stuff.
 end
 ```
-Read album:
+Read album name:
 ```crystal
 tags = mp4.read
 puts(tags.album)
 ```
 
-Write album title and year:
+Write title and year:
 ```crystal
 tags = MP4Tag::MP4Tags.new
 tags.title = "my title"
