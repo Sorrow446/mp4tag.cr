@@ -4,7 +4,7 @@ module MP4Tag
   BUF_SIZE = 4096*1024
 
   class MP4
-    property io : IO
+    private property io : IO
 
     protected def close() : Nil
       @io.close

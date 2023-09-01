@@ -10,7 +10,7 @@ module MP4Tag
 	class InvalidStcoSizeException < Exception
   end
 
-	FTYPS = [
+	private FTYPS = [
 		Bytes[0x66, 0x74, 0x79, 0x70, 0x4D, 0x34, 0x41, 0x20], # M4A
 		Bytes[0x66, 0x74, 0x79, 0x70, 0x4D, 0x34, 0x42, 0x20], # M4B
 		Bytes[0x66, 0x74, 0x79, 0x70, 0x64, 0x61, 0x73, 0x68], # dash
@@ -22,7 +22,7 @@ module MP4Tag
 	]
 
 	# Boxes to expand.
-	CONTAINERS = [
+	private CONTAINERS = [
 	  "moov", "udta", "meta", "ilst", "----", "(c)alb",
 	  "aART", "(c)art", "(c)nam", "(c)cmt", "(c)gen", "gnre",
 	  "(c)wrt", "(c)con", "cprt", "desc", "(c)lyr", "(c)nrt",
@@ -54,7 +54,6 @@ module MP4Tag
 	  Rock
 	  Techno
 	  Industrial
-
 	  Alternative
 	  Ska
 	  DeathMetal
@@ -75,7 +74,6 @@ module MP4Tag
 	  SoundClip
 	  Gospel
 	  Noise
-
 	  AlternativeRock
 	  Bass
 	  Soul
@@ -95,7 +93,6 @@ module MP4Tag
 	  Comedy
 	  Cull
 	  Gangsta
-
 	  Top40
 	  ChristianRap
 	  PopSlashFunk
@@ -123,7 +120,6 @@ module MP4Tag
 		Clean
 	end
 
-	# u8
 	enum IMAGEFORMAT : UInt8
 		JPEG = 13
 		PNG
@@ -170,12 +166,12 @@ module MP4Tag
 	  end
 	end
 
-	class MP4Picture
+	private class MP4Picture
 	  property format : IMAGEFORMAT = IMAGEFORMAT::Auto
 	  property data   : Bytes = Bytes.new(0)
 	end
 
-	class MP4Box
+	private class MP4Box
 	  property start_offset : Int64
 	  property end_offset   : Int64
 	  property box_size     : Int64
@@ -184,7 +180,7 @@ module MP4Tag
 	  end
 	end
 
-  class MP4Boxes
+  private class MP4Boxes
     property boxes : Array(MP4Box)
     def initialize()
       @boxes = Array(MP4Box).new
