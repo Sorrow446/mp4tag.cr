@@ -1,0 +1,8 @@
+name: mp4tag
+version: 0.1.0
+
+authors:
+  - Sorrow446
+
+description: |
+  MP4 tag library with write support.
