@@ -5,7 +5,7 @@ MP4 tag library written in Crystal.
 Add this to your application's shard.yml:
 ```yaml
 dependencies:
-  flactag:
+  mp4tag:
     github: Sorrow446/mp4tag.cr
 ```
 
