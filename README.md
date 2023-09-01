@@ -251,5 +251,5 @@ end
 ```
 
 ## Thank you
-- npn from the Crystak Discord for help parsing MP4 boxes.
+- npn from the Crystal Discord server for help parsing MP4 boxes.
 
