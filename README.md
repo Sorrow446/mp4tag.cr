@@ -44,11 +44,9 @@ end
 Write two covers, retaining any already written:
 ```crystal
 def read_pic_data(pic_path : String) : Bytes
-  data = Bytes.new(0)
   File.open(pic_path, "rb") do |f|
-    data = f.getb_to_end
+    f.getb_to_end
   end
-  return data
 end
 
 tags = MP4Tag::MP4Tags.new
