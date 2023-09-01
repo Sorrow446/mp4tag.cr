@@ -19,6 +19,11 @@ MP4Tag.open("1.m4a") do |mp4|
   # Stuff.
 end
 ```
+Read album:
+```crystal
+tags = mp4.read
+puts(tags.album)
+```
 
 Write album title and year:
 ```crystal
@@ -61,7 +66,6 @@ tags.pictures.push(pic_two)
 mp4.write(tags)
 ```
 
-Case-insensitive. Any others will be assumed to be custom tags.
 Delete all tags and the second picture:
 ```crystal
 tags = MP4Tag::MP4Image.new
@@ -104,6 +108,7 @@ track_number
 track_total
 year
 ```
+Case-insensitive. Any others will be assumed to be custom tags.
 
 ## Objects
 ```crystal
